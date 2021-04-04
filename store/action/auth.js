@@ -17,7 +17,7 @@ export const signup = (email, password) => {
                 })
             }
           );
-
+            //test if user exist 
           if (!response.ok) {
             const errorResData = await response.json();
             const errorId= errorResData.error.message;
