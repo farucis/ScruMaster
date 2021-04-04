@@ -33,7 +33,7 @@ const formReducer = (state, action) => {
   return state;
 };  
 
-// create login screen
+// create login screen & signup screen
 const LoginScreen = (props) => {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
