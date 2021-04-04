@@ -59,7 +59,7 @@ const LoginScreen = (props) => {
         formState.inputValues.email,
         formState.inputValues.password
       );
-    } else {
+    } else { // connect to the app with login func
       action = authActions.login(
         formState.inputValues.email,
         formState.inputValues.password
