@@ -54,7 +54,7 @@ const LoginScreen = (props) => {
   
   const authHandler = async () => {
     let action;
-    if (isSignup) {
+    if (isSignup) { //save user data in DB
       action = authActions.signup(
         formState.inputValues.email,
         formState.inputValues.password
