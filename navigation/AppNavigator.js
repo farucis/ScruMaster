@@ -2,7 +2,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { Platform } from 'react-native';
 import { createDrawerNavigator } from 'react-navigation-drawer';
-
+//import screens from App and design defualt navigation optaions
 import EditUserScreen from '../screens/EditUserScreen';
 import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
