@@ -1,6 +1,7 @@
 export const SIGNUP = 'SIGNUP';
 export const LOGIN ='LOGIN';
 
+//signup with firebase function
 export const signup = (email, password) => {
     return async dispatch => {
           const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCp82HA18651XcHfTSJbCY4lPueN2s4l30',
