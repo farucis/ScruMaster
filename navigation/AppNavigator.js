@@ -76,7 +76,7 @@ const LogoutNavigator = createStackNavigator({
 }, {
     defaultNavigationOptions: defaultNavOptions
 });
-
+//Create Menu Drewer Navigator button and Config for screens
 const AppNavigator = createDrawerNavigator({
     Home: HomeNavigator,
     MyProfile: ProfileNavigator,
