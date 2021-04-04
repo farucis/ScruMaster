@@ -1,6 +1,6 @@
 import { LOGIN, SIGNUP } from '../action/auth';
 
-
+//create state for login and signup
 const initialState = {
     token: null,
     userId: null
