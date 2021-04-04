@@ -129,7 +129,7 @@ return (
             />
             <View style={styles.buttonContainer}>
               {isLoading ? (
-                  <ActivityIndicator size='small' color={Colors.primary}/> 
+                  <ActivityIndicator size='small' color={Colors.primary}/> // Add login button
                   ) : (
                   <Button
                      title={isSignup ? 'Sign Up' : 'Login'}
