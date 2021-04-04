@@ -4,6 +4,7 @@ import { View, Text, TextInput, StyleSheet } from 'react-native';
 const INPUT_CHANGE = 'INPUT_CHANGE';
 const INPUT_BLUR = 'INPUT_BLUR';
 
+///create input reducer
 const inputReducer = (state, action) => {
   switch (action.type) {
     case INPUT_CHANGE:
