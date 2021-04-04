@@ -81,7 +81,7 @@ const Input = props => {
     </View>
   );
 };
-
+/// desigen input place holder
 const styles = StyleSheet.create({
   formControl: {
     width: '100%'
