@@ -96,7 +96,7 @@ const LoginNavigator = createStackNavigator({
     defaultNavigationOptions: defaultNavOptions
 });
 
-
+// create switcher for main navigator to move forward to the app after succes login
 const MainNavigator = createSwitchNavigator({
     Login: LoginNavigator,
     App : AppNavigator
