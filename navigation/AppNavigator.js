@@ -57,7 +57,7 @@ const ProfileNavigator = createStackNavigator({
     defaultNavigationOptions: defaultNavOptions
 });
 
-
+//Create Config for logout and for the project navigator
 const ProjectsNavigator = createStackNavigator({
      Projects : ProjectsScreen,
      AddProject: AddProjectScreen,
