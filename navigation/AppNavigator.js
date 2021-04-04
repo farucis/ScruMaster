@@ -29,7 +29,7 @@ const defaultNavOptions = {
 }
 
 
-
+// Create Configartion for the screens of the app
 const HomeNavigator = createStackNavigator({
     Home: HomeScreen
 }, {
