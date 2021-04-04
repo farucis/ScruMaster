@@ -47,7 +47,7 @@ export const signup = (email, password) => {
        };
     };
 
-
+//login with firebase function
 export const login = (email, password) => {
     return async dispatch => {
         const response = await fetch(
