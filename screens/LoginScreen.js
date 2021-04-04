@@ -33,7 +33,7 @@ const formReducer = (state, action) => {
   return state;
 };  
 
-
+// create login screen
 const LoginScreen = (props) => {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
@@ -129,7 +129,7 @@ return (
             />
             <View style={styles.buttonContainer}>
               {isLoading ? (
-                  <ActivityIndicator size='small' color={Colors.primary}/>
+                  <ActivityIndicator size='small' color={Colors.primary}/> 
                   ) : (
                   <Button
                      title={isSignup ? 'Sign Up' : 'Login'}
@@ -137,14 +137,16 @@ return (
                      onPress={authHandler}
                  />
               )}
+
             </View>
+            
             <View style={styles.buttonContainer}>
               <Button
                 title={`Switch to ${isSignup ? 'Login' : 'Sign Up'}`}
                 color={Colors.accent}
                 onPress={() => {
                     setIsSignup(prevState => !prevState);
-                }}
+                }} //add signup button
               />
             </View>
         </ScrollView>
