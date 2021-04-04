@@ -64,7 +64,7 @@ export const login = (email, password) => {
             })
         }
         );
-    
+ //test if email not found
         if (!response.ok) {
             const errorResData = await response.json();
             const errorId= errorResData.error.message;
