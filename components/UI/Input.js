@@ -62,7 +62,7 @@ const Input = props => {
   const lostFocusHandler = () => {
     dispatch({ type: INPUT_BLUR });
   };
-
+  ///show the right erorr
   return (
     <View style={styles.formControl}>
       <Text style={styles.label}>{props.label}</Text>
