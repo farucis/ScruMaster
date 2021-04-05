@@ -2,7 +2,7 @@ import  React , { useEffect} from 'react';
 import { View, Text, StyleSheet } from 'react-native';
  
 const LogoutScreen = (props) => {
-
+//nevigate to login when user logout
 useEffect(() => {
     props.navigation.navigate('Login');
     },);
