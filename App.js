@@ -22,7 +22,7 @@ const rootReducer = combineReducers({
   auth: authReducer
 });
 
-
+//create store for the app
 const store = createStore(rootReducer, applyMiddleware(ReduxThunk));
 
 const fetchFonts = () => {
