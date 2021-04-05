@@ -6,6 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
 
+//add the reducers from store
 import AppNavigator from '../ScruMaster/navigation/AppNavigator';
 import projectsReducer from './store/reducer/projects';
 import sprintsReducer from './store/reducer/sprints';
