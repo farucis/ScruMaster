@@ -4,6 +4,7 @@ import App from '../App';
 import * as auth from '../store/action/auth';
 
 import configureStore from 'redux-mock-store';
+//test the app
 
 test('The App renders correctly', () => {
   const tree = renderer.create(<App />).toJSON();
