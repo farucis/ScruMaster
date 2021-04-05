@@ -29,6 +29,8 @@ test('should dispatch LOGIN  action', () => {
   expect(actions).toEqual([expectedPayload])
 })
 
+//test for sign-up 
+
 const signup = () => ({ type: 'SIGNUP' })
 
 test('should dispatch SIGNUP action', () => {
