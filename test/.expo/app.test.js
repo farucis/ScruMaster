@@ -14,7 +14,7 @@ test('The App renders correctly', () => {
 
 const middlewares = []
 const mockStore = configureStore(middlewares)
-
+//test for login
 const login = () => ({ type: 'LOGIN' })
 
 test('should dispatch LOGIN  action', () => {
