@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 
 import Colors from '../constants/Colors';
 import Card from '../components/UI/Card';
-
+// create UI for user item
 const UserItem = props => {
   return (
     
