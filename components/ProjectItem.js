@@ -26,7 +26,7 @@ const ProjectItem = props => {
     </Card>
   );
 };
-
+// design project item
 const styles = StyleSheet.create({
   container: {
     height: 140,
