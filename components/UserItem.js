@@ -26,7 +26,7 @@ const UserItem = props => {
     </Card>
   );
 };
-
+// design the card
 const styles = StyleSheet.create({
   container: {
     height: 140,
