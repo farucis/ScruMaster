@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 
 import Colors from '../constants/Colors';
 import Card from '../components/UI/Card';
-
+// create sprint item
 const SprintItem = props => {
   return (  
     <Card style={styles.container}>
