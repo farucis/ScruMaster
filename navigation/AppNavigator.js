@@ -3,13 +3,13 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { Platform } from 'react-native';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 //import screens from App and design defualt navigation optaions
-import EditUserScreen from '../screens/EditUserScreen';
+//import EditUserScreen from '../screens/EditUserScreen';
 import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import LogoutScreen from '../screens/LogoutScreen';
-import MyProjectsScreen from '../screens/MyProjectsScreen';
+//import MyProjectsScreen from '../screens/MyProjectsScreen';
 import ProfileScreen from '../screens/ProfileScreen';
-import ProjectsScreen from '../screens/ProjectsScreen';
+/*import ProjectsScreen from '../screens/ProjectsScreen';
 import SprintsScreen from '../screens/SprintsScreen';
 import TasksScreen from '../screens/TasksScreen';
 import TaskDetailsScreen from '../screens/TaskDetailsScreen';
@@ -17,7 +17,7 @@ import UsersScreen from '../screens/UsersScreen';
 import AddProjectScreen from '../screens/add/AddProjectScreen';
 import AddSprintScreen from '../screens/add/AddSprintScreen';
 import AddTaskScreen from '../screens/add/AddTaskScreen';
-
+*/
 
 import Colors from '../constants/Colors';
 
@@ -36,7 +36,7 @@ const HomeNavigator = createStackNavigator({
     defaultNavigationOptions: defaultNavOptions
 });
 
-
+/*
 const UsersNavigator = createStackNavigator({
     Users: UsersScreen,
     EditUser: EditUserScreen
@@ -50,13 +50,13 @@ const MyProjectsNavigator = createStackNavigator({
 }, {
     defaultNavigationOptions: defaultNavOptions
 });
-
+*/
 const ProfileNavigator = createStackNavigator({
     Profile: ProfileScreen
 }, {
     defaultNavigationOptions: defaultNavOptions
 });
-
+/*
 //Create Config for logout and for the project navigator
 const ProjectsNavigator = createStackNavigator({
      Projects : ProjectsScreen,
@@ -70,7 +70,7 @@ const ProjectsNavigator = createStackNavigator({
         defaultNavigationOptions: defaultNavOptions
 });
 
-
+*/
 const LogoutNavigator = createStackNavigator({
     Logout: LogoutScreen
 }, {
@@ -80,9 +80,9 @@ const LogoutNavigator = createStackNavigator({
 const AppNavigator = createDrawerNavigator({
     Home: HomeNavigator,
     MyProfile: ProfileNavigator,
-    MyProjects:MyProjectsNavigator,
-    AllProjects: ProjectsNavigator,
-    Users:  UsersNavigator,
+    //MyProjects:MyProjectsNavigator,
+    //AllProjects: ProjectsNavigator,
+    //Users:  UsersNavigator,
     Logout: LogoutNavigator
 },{
     contentOptions: {

@@ -8,17 +8,19 @@ import AppLoading from 'expo-app-loading';
 
 //add the reducers from store
 import AppNavigator from '../ScruMaster/navigation/AppNavigator';
+/*
 import projectsReducer from './store/reducer/projects';
 import sprintsReducer from './store/reducer/sprints';
 import tasksReducer from './store/reducer/tasks';
 import usersReducer from './store/reducer/users';
+*/
 import authReducer from './store/reducer/auth';
 
 const rootReducer = combineReducers({
-  projects: projectsReducer,
-  sprints: sprintsReducer,
-  tasks: tasksReducer,
-  users: usersReducer,
+  //projects: projectsReducer,
+  //sprints: sprintsReducer,
+  //tasks: tasksReducer,
+  //users: usersReducer,
   auth: authReducer
 });
 

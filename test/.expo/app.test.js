@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import App from '../App';
-import * as auth from '../store/action/auth';
+import App from '../../App';
+import * as auth from '../../store/action/auth';
 
 import configureStore from 'redux-mock-store';
 //test the app
