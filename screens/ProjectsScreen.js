@@ -16,7 +16,7 @@ const ProjectsScreen = (props) => {
      dispatch(projectsAction.fetchProjects());
    }, [dispatch]);
 
-
+// if the there no project in the system show the messege
    if (projects.length === 0) {
     return ( 
       <LinearGradient colors={['#6F7AED','#ffe3ff']} style={styles.gradient}>
@@ -27,7 +27,7 @@ const ProjectsScreen = (props) => {
 
     );
   }
-
+  //Use the ProjectItem UI to Design the project Item 
    return (
    <LinearGradient colors={['#6F7AED','#ffe3ff']} style={styles.gradient}>
     <FlatList
