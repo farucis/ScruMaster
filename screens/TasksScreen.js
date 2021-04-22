@@ -28,6 +28,7 @@ const TasksScreen = (props) => {
   }, [addHandler, dispatch]);
 
   if (tasks.length === 0) {
+    ///if the sprint dont have task show the msg task not found
     return ( 
       <LinearGradient colors={['#6F7AED','#ffe3ff']} style={styles.gradient}>
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -36,6 +37,7 @@ const TasksScreen = (props) => {
       </LinearGradient>
     );
   }
+  //show the task item and all the functions of delete ,add and details
    return (
     <LinearGradient colors={['#6F7AED','#ffe3ff']} style={styles.gradient}>
       <FlatList
