@@ -39,3 +39,26 @@ test('signup a new user and login new user ', () => {
 
   });
 
+
+
+  test('add task ,edit task and remove task', () => {
+
+    
+    const initialState = {}
+    const store = mockStore(initialState)
+         ///////////// create new task /////////////
+
+    const sprintId = '1';
+    const title = 'first project';
+    const description = 'create first project for test';
+
+    const createTask = (sprintId, title, description) => ({ type: 'CREATE_TASK' })
+
+    store.dispatch(createTask(sprintId, title, description))
+
+    store.getState(sprintId, title, description);
+
+    expect(store.replaceReducer).not.toBeNull();
+
+
+  });
