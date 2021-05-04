@@ -60,5 +60,28 @@ test('signup a new user and login new user ', () => {
 
     expect(store.replaceReducer).not.toBeNull();
 
+        ///////////// update task details /////////////
+
+    const fetchTasks = () => ({ type: 'SET_TASKS' })
+
+    store.dispatch(fetchTasks())
+
+    store.getState();
+
+    expect(store.replaceReducer).not.toBeNull();
+
+         ///////////// dalete task by id /////////////
+
+
+    const taskId = '1';
+
+    const deleteTask = (taskId) => ({ type: 'DELETE_TASK' })
+
+    store.dispatch(deleteTask(taskId))
+
+    store.getState(taskId);
+
+    expect(store.replaceReducer).not.toBeNull();
+
 
   });
