@@ -332,3 +332,35 @@ test('should dispatch DELETE_USER_FROM_PROJECT action', () => {
   const expectedPayload = { type: 'DELETE_USER_FROM_PROJECT' }
   expect(actions).toEqual([expectedPayload])
 })
+
+// test add User To Task
+
+const addUserToTask = () => ({ type: 'ADD_USER_TO_TASK' })
+
+test('should dispatch ADD_USER_TO_TASK action', () => {
+
+  const initialState = {}
+  const store = mockStore(initialState)
+
+  store.dispatch(addUserToTask())
+
+  const actions = store.getActions()
+  const expectedPayload = { type: 'ADD_USER_TO_TASK' }
+  expect(actions).toEqual([expectedPayload])
+})
+
+//test delete User From Task
+
+const deleteUserFromTask = () => ({ type: 'DELETE_USER_FROM_TASK ' })
+
+test('should dispatch DELETE_USER_FROM_TASK  action', () => {
+
+  const initialState = {}
+  const store = mockStore(initialState)
+
+  store.dispatch(deleteUserFromTask())
+
+  const actions = store.getActions()
+  const expectedPayload = { type: 'DELETE_USER_FROM_TASK ' }
+  expect(actions).toEqual([expectedPayload])
+})
