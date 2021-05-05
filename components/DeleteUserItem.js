@@ -4,6 +4,8 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 import Colors from '../constants/Colors';
 import Card from './UI/Card';
 
+//design the delete user componnent for adding user to project and to task
+
 const DeleteUserItem = props => {
   return (
     
