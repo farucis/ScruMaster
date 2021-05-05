@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 
 import Colors from '../constants/Colors';
 import Card from '../components/UI/Card';
-
+//make the user card with to two buttons for edit and delete user
 const UserItem = props => {
   return (
     
