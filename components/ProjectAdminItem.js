@@ -7,7 +7,7 @@ import Card from '../components/UI/Card';
 //create the project item to manage the projects 
 const ProjectAdminItem = props => {
   return (
-    
+
     <Card style={styles.container}>
       <View style={styles.details}>
         <Text style={styles.title}>{props.title}</Text>
@@ -45,7 +45,7 @@ const ProjectAdminItem = props => {
     </Card>
   );
 };
-
+//UI for the card 
 const styles = StyleSheet.create({
   container: {
     height: 180,
