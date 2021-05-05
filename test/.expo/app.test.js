@@ -283,3 +283,36 @@ test('should dispatch UPDATE_USER action', () => {
   const expectedPayload = { type: 'UPDATE_USER' }
   expect(actions).toEqual([expectedPayload])
 })
+
+
+//test update User dmin
+
+const updateUserAdmin = () => ({ type: 'UPDATE_USER_ADMIN' })
+
+test('should dispatch UPDATE_USER_ADMIN action', () => {
+
+  const initialState = {}
+  const store = mockStore(initialState)
+
+  store.dispatch(updateUserAdmin())
+
+  const actions = store.getActions()
+  const expectedPayload = { type: 'UPDATE_USER_ADMIN' }
+  expect(actions).toEqual([expectedPayload])
+})
+
+//test add User To Project
+
+const addUserToProject = () => ({ type: 'ADD_USER_TO_PROJECT' })
+
+test('should dispatch ADD_USER_TO_PROJECT action', () => {
+
+  const initialState = {}
+  const store = mockStore(initialState)
+
+  store.dispatch(addUserToProject())
+
+  const actions = store.getActions()
+  const expectedPayload = { type: 'ADD_USER_TO_PROJECT' }
+  expect(actions).toEqual([expectedPayload])
+})
