@@ -34,6 +34,9 @@ const MyTasksScreen = (props) => {
       </LinearGradient>
     );
   }
+
+///order the task by priority 
+
    return (
     <LinearGradient colors={['#6F7AED','#ffe3ff']} style={styles.gradient}>
      <Button
