@@ -316,3 +316,19 @@ test('should dispatch ADD_USER_TO_PROJECT action', () => {
   const expectedPayload = { type: 'ADD_USER_TO_PROJECT' }
   expect(actions).toEqual([expectedPayload])
 })
+
+// test delete User From Project
+
+const deleteUserFromProject = () => ({ type: 'DELETE_USER_FROM_PROJECT' })
+
+test('should dispatch DELETE_USER_FROM_PROJECT action', () => {
+
+  const initialState = {}
+  const store = mockStore(initialState)
+
+  store.dispatch(deleteUserFromProject())
+
+  const actions = store.getActions()
+  const expectedPayload = { type: 'DELETE_USER_FROM_PROJECT' }
+  expect(actions).toEqual([expectedPayload])
+})
