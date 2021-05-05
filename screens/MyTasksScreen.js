@@ -75,7 +75,7 @@ MyTasksScreen.navigationOptions = navData => {
   )
  };  
 };
-
+///design developer task screen
 const styles = StyleSheet.create({
   topContainer: {
     alignItems: 'center',    
