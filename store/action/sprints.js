@@ -25,7 +25,7 @@ export const fetchSprints = () => {
 };
 
 
-
+/// create delete sprint func
 export const deleteSprint = sprintId => {
     return async dispatch => {
         await fetch(`https://scrumaster-702cc-default-rtdb.europe-west1.firebasedatabase.app/sprints/${sprintId}.json`, {
