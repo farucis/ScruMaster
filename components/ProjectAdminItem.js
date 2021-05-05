@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 import Colors from '../constants/Colors';
 import Card from '../components/UI/Card';
 
+//create the project item to manage the projects 
 const ProjectAdminItem = props => {
   return (
     
