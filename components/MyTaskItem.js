@@ -4,6 +4,8 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 import Colors from '../constants/Colors';
 import Card from './UI/Card';
 
+
+//design my task item with 2 buttons ton of start and end task and the description
 const MyTaskItem = props => {
   return (
     <Card style={styles.container}>
