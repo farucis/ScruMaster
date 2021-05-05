@@ -5,7 +5,7 @@ export const DELETE_SPRINT = 'DELETE_SPRINT';
 export const CREATE_SPRINT = 'CREATE_SPRINT';
 export const SET_SPRINTS = 'SET_SPRINTS';
 
-
+///create the fetch sprint func
 export const fetchSprints = () => {
     return async dispatch => {
         const response = await fetch('https://scrumaster-702cc-default-rtdb.europe-west1.firebasedatabase.app/sprints.json');
