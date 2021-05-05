@@ -35,7 +35,7 @@ export const deleteSprint = sprintId => {
   };
  };
     
-
+// create sprint func
 
 export const createSprint = (projectId, number, time) => {
     return async dispatch => {
