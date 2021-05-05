@@ -109,6 +109,55 @@ test('should dispatch CREATE_PROJECT action', () => {
   expect(actions).toEqual([expectedPayload])
 })
 
+// test fetch Sprints
+
+const fetchSprints = () => ({ type: 'SET_SPRINTS' })
+
+test('should dispatch SET_SPRINTS action', () => {
+
+  const initialState = {}
+  const store = mockStore(initialState)
+
+  store.dispatch(fetchSprints())
+
+  const actions = store.getActions()
+  const expectedPayload = { type: 'SET_SPRINTS' }
+  expect(actions).toEqual([expectedPayload])
+})
+
+//test delete Sprint
+
+const deleteSprint = () => ({ type: 'DELETE_SPRINT' })
+
+test('should dispatch DELETE_SPRINT action', () => {
+
+  const initialState = {}
+  const store = mockStore(initialState)
+
+  store.dispatch(deleteSprint())
+
+  const actions = store.getActions()
+  const expectedPayload = { type: 'DELETE_SPRINT' }
+  expect(actions).toEqual([expectedPayload])
+})
+
+//test create Sprint
+
+const createSprint = () => ({ type: 'CREATE_SPRINT' })
+
+test('should dispatch CREATE_SPRINT action', () => {
+
+  const initialState = {}
+  const store = mockStore(initialState)
+
+  store.dispatch(createSprint())
+
+  const actions = store.getActions()
+  const expectedPayload = { type: 'CREATE_SPRINT' }
+  expect(actions).toEqual([expectedPayload])
+})
+
+
 // test fetch Tasks
 
 const fetchTasks = () => ({ type: 'SET_TASKS' })
