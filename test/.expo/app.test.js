@@ -252,3 +252,34 @@ test('should dispatch SET_USERS action', () => {
   const expectedPayload = { type: 'SET_USERS' }
   expect(actions).toEqual([expectedPayload])
 })
+// test delete User
+
+const deleteUser = () => ({ type: 'DELETE_USER' })
+
+test('should dispatch DELETE_USER action', () => {
+
+  const initialState = {}
+  const store = mockStore(initialState)
+
+  store.dispatch(deleteUser())
+
+  const actions = store.getActions()
+  const expectedPayload = { type: 'DELETE_USER' }
+  expect(actions).toEqual([expectedPayload])
+})
+
+// test update User
+
+const updateUser = () => ({ type: 'UPDATE_USER' })
+
+test('should dispatch UPDATE_USER action', () => {
+
+  const initialState = {}
+  const store = mockStore(initialState)
+
+  store.dispatch(updateUser())
+
+  const actions = store.getActions()
+  const expectedPayload = { type: 'UPDATE_USER' }
+  expect(actions).toEqual([expectedPayload])
+})
