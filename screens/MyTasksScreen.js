@@ -7,7 +7,7 @@ import MyTaskItem from '../components/MyTaskItem';
 import * as tasksAction from '../store/action/tasks';
 import Colors from '../constants/Colors';
 
-
+///create task screen for developer and start task button and end button
 const MyTasksScreen = (props) => {
    const dispatch = useDispatch()
    //const tasks = useSelector(state => state.users.availableUsers.filter(user => user.taskId));
