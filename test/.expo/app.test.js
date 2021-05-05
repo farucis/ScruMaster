@@ -205,3 +205,50 @@ test('should dispatch CREATE_TASK action', () => {
   const expectedPayload = { type: 'CREATE_TASK' }
   expect(actions).toEqual([expectedPayload])
 })
+// test startTask
+
+const startTask = () => ({ type: 'START_TASK' })
+
+test('should dispatch START_TASK action', () => {
+
+  const initialState = {}
+  const store = mockStore(initialState)
+
+  store.dispatch(startTask())
+
+  const actions = store.getActions()
+  const expectedPayload = { type: 'START_TASK' }
+  expect(actions).toEqual([expectedPayload])
+})
+
+// test end task
+
+const endTask = () => ({ type: 'END_TASK' })
+
+test('should dispatch END_TASK action', () => {
+
+  const initialState = {}
+  const store = mockStore(initialState)
+
+  store.dispatch(endTask())
+
+  const actions = store.getActions()
+  const expectedPayload = { type: 'END_TASK' }
+  expect(actions).toEqual([expectedPayload])
+})
+
+//test fetch Users
+
+const fetchUsers = () => ({ type: 'SET_USERS' })
+
+test('should dispatch SET_USERS action', () => {
+
+  const initialState = {}
+  const store = mockStore(initialState)
+
+  store.dispatch(fetchUsers())
+
+  const actions = store.getActions()
+  const expectedPayload = { type: 'SET_USERS' }
+  expect(actions).toEqual([expectedPayload])
+})
