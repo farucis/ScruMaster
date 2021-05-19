@@ -41,7 +41,7 @@ const DeleteUsersScreen = (props) => {
    </LinearGradient>
   );
 };
-
+// design the delete user screen
 const styles = StyleSheet.create({
   gradient: {
     width: '100%',
