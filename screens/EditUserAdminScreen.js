@@ -30,7 +30,7 @@ const EditUsersAdminScreen = (props) => {
   useEffect(() => {
     props.navigation.setParams({ submit: submitHandler });
   }, [submitHandler]);
-
+//create the input for edit users
   return (
   <KeyboardAvoidingView style={{ flex: 1 }} behavior="height'">  
     <ScrollView>     
