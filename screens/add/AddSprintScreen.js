@@ -57,7 +57,7 @@ AddSprintScreen.navigationOptions = navData => {
       )
   };
 };
-
+//design the add sprint screen
  const styles = StyleSheet.create({
     form: {
       margin: 20
