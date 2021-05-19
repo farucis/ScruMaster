@@ -39,7 +39,7 @@ const DeleteUserTaskScreen = (props) => {
   </LinearGradient>
  );
 };
-
+//design the delete user from task screen
 const styles = StyleSheet.create({
  gradient: {
    width: '100%',
