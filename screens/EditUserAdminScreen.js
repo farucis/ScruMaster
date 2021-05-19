@@ -88,7 +88,7 @@ EditUsersAdminScreen.navigationOptions = navData => {
     )
   };
 };
-
+//design the edit users screen
 const styles = StyleSheet.create({
   form: {
     margin: 20
