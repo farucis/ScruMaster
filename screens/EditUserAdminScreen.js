@@ -15,7 +15,7 @@ const EditUsersAdminScreen = (props) => {
   useEffect(() => {
    dispatch(usersAction.fetchUsers());
  }, [dispatch]);
- 
+ //create the states for the input values & dispatch the action
   const [permission,setPermission] = useState(userExists ? userExists.permission : '');
   const [name,setName] = useState(userExists ? userExists.name : '');
   const [phone,setPhone] = useState(userExists ? userExists.phone : '');
