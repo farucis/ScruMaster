@@ -23,7 +23,7 @@ const AddTaskScreen = (props) => {
   }, [submitHandler]);
   
 
-
+//create the input for new task
 return (
     <ScrollView>
       <View style={styles.form}>
