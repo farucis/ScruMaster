@@ -47,7 +47,7 @@ AddProjectScreen.navigationOptions = navData => {
       )
   };
 };
-
+//design the scram
  const styles = StyleSheet.create({
     form: {
       margin: 20
