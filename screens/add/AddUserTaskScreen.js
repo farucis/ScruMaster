@@ -35,7 +35,7 @@ const AddUserTaskScreen = (props) => {
    </LinearGradient>
   );
 };
-
+//design the add user to task screen
 const styles = StyleSheet.create({
   gradient: {
     width: '100%',
