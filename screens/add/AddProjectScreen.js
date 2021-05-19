@@ -19,7 +19,7 @@ useEffect(() => {
   props.navigation.setParams({ submit: submitHandler });
 }, [submitHandler]);
 
-
+//create the input for adding project & use redux for dispatch
 return (
     <ScrollView>
       <View style={styles.form}>
