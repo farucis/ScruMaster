@@ -67,7 +67,7 @@ AddTaskScreen.navigationOptions = navData => {
       )
   };
 };
-
+//design the add task screen
  const styles = StyleSheet.create({
     form: {
       margin: 20
