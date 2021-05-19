@@ -21,7 +21,7 @@ useEffect(() => {
   props.navigation.setParams({ submit: submitHandler });
 }, [submitHandler]);
 
-  
+  //create the input for add new sprint
   return (
       <ScrollView>
         <View style={styles.form}>
