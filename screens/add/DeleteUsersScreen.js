@@ -23,7 +23,7 @@ const DeleteUsersScreen = (props) => {
       </LinearGradient>
     );
   } 
-
+//show the users in the system & create buttun to delete user  
    return (
      <LinearGradient colors={['#6F7AED','#ffe3ff']} style={styles.gradient}> 
         <FlatList
