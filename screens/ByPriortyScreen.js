@@ -68,7 +68,7 @@ ByPriortyScreen.navigationOptions = navData => {
   headerTitle: 'Order By priority',
  };  
 };
-
+//design by priority screen
 const styles = StyleSheet.create({
   topContainer: {
     alignItems: 'center',    
