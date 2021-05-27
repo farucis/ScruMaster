@@ -3,20 +3,22 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { Platform } from 'react-native';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 //import screens from App and design defualt navigation optaions
-//import EditUserScreen from '../screens/EditUserScreen';
 import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import LogoutScreen from '../screens/LogoutScreen';
-//import MyProjectsScreen from '../screens/MyProjectsScreen';
 import ProfileScreen from '../screens/ProfileScreen';
-/*import ProjectsScreen from '../screens/ProjectsScreen';
-import SprintsScreen from '../screens/SprintsScreen';
+import ProjectsScreen from '../screens/ProjectsScreen';
 import TasksScreen from '../screens/TasksScreen';
 import TaskDetailsScreen from '../screens/TaskDetailsScreen';
-import UsersScreen from '../screens/UsersScreen';
 import AddProjectScreen from '../screens/add/AddProjectScreen';
 import AddSprintScreen from '../screens/add/AddSprintScreen';
 import AddTaskScreen from '../screens/add/AddTaskScreen';
+/*
+import EditUserScreen from '../screens/EditUserScreen';
+import MyProjectsScreen from '../screens/MyProjectsScreen';
+import SprintsScreen from '../screens/SprintsScreen';
+import UsersScreen from '../screens/UsersScreen';
+
 */
 
 import Colors from '../constants/Colors';
@@ -56,12 +58,12 @@ const ProfileNavigator = createStackNavigator({
 }, {
     defaultNavigationOptions: defaultNavOptions
 });
-/*
+
 //Create Config for logout and for the project navigator
 const ProjectsNavigator = createStackNavigator({
      Projects : ProjectsScreen,
      AddProject: AddProjectScreen,
-     Sprints: SprintsScreen,
+     //Sprints: SprintsScreen,
      AddSprint: AddSprintScreen,
      Tasks : TasksScreen,
      AddTask: AddTaskScreen,
@@ -70,7 +72,7 @@ const ProjectsNavigator = createStackNavigator({
         defaultNavigationOptions: defaultNavOptions
 });
 
-*/
+
 const LogoutNavigator = createStackNavigator({
     Logout: LogoutScreen
 }, {
@@ -81,7 +83,7 @@ const AppNavigator = createDrawerNavigator({
     Home: HomeNavigator,
     MyProfile: ProfileNavigator,
     //MyProjects:MyProjectsNavigator,
-    //AllProjects: ProjectsNavigator,
+    AllProjects: ProjectsNavigator,
     //Users:  UsersNavigator,
     Logout: LogoutNavigator
 },{
