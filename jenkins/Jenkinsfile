@@ -25,6 +25,20 @@ pipeline {
                 echo 'Finished backend Tests'
             }
         }
+        stage('Code Coverage') {
+            agent {
+                docker {
+                    image 'node:10-alpine'
+                    args '-p 3000:3000'
+                }
+            }
+            steps {
+                sh 'npm test -- --reporters="default" --watchAll f'
+                sh 'q'
+                echo 'Finished Code Coverage'
+            }
+        }
+        
         stage('Static Analysis') {
             agent {
                 docker {
