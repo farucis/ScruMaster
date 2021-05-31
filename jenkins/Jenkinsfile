@@ -37,7 +37,8 @@ pipeline {
                 echo 'Finished Code Coverage'
             }
         }
-        /*
+        
+        
         stage('Static Analysis') {
             agent {
                 docker {
@@ -46,10 +47,11 @@ pipeline {
                 }
             }
             steps {
-                sh 'npm run analysis'
+                sh 'npm test -- --reporters="default" --watchAll f '
                 echo 'Finished Static Analysis'
             }
         }
+        /*
         stage('Code Coverage') {
             agent {
                 docker {
