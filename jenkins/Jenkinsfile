@@ -46,10 +46,8 @@ pipeline {
                 }
             }
             steps {
-                sh 'npm install npm-run-all --save-dev'
-                sh 'npm test -- --reporters="default" --watchAll'
-                sh 'f'
-                sh 'q'
+                sh 'npm test -- --reporters="default"'
+            
                 echo 'Finished Static Analysis'
             }
         }
