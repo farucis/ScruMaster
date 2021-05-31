@@ -33,8 +33,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'npm test -- --reporters="default" --watchAll f'
-                sh 'q'
+                sh  'npm test -- --coverage --watchall=false'               
                 echo 'Finished Code Coverage'
             }
         }
