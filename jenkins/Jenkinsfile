@@ -25,20 +25,6 @@ pipeline {
                 echo 'Finished backend Tests'
             }
         }
-        stage('Code Coverage') {
-            agent {
-                docker {
-                    image 'node:10-alpine'
-                    args '-p 3000:3000'
-                }
-            }
-            steps {
-                sh 'npm test -- --coverage --watchall=false'
-                echo 'Finished Code Coverage'
-            }
-        }
-        
-        
         stage('Static Analysis') {
             agent {
                 docker {
@@ -47,23 +33,11 @@ pipeline {
                 }
             }
             steps {
-                sh 'npm test -- --reporters="default" --watchAll f '
+                sh 'npm test -- --reporters="default" --watchAll f'
                 echo 'Finished Static Analysis'
             }
         }
-        /*
-        stage('Code Coverage') {
-            agent {
-                docker {
-                    image 'node:10-alpine'
-                    args '-p 3000:3000'
-                }
-            }
-            steps {
-                sh 'npm run coverage'
-                echo 'Finished Code Coverage'
-            }
-        }
-        */
+        
+        
     }
 }
