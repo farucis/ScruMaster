@@ -48,6 +48,7 @@ pipeline {
             steps {
                 sh 'npm test -- --reporters="default" --watchAll'
                 sh 'f'
+                sh 'q'
                 echo 'Finished Static Analysis'
             }
         }
