@@ -33,7 +33,8 @@ pipeline {
                 }
             }
             steps {
-                sh 'npm test -- --coverage --watchall=false'
+                sh 'npm test -- --reporters="default" --watchAll f'
+                sh 'q'
                 echo 'Finished Code Coverage'
             }
         }
@@ -50,18 +51,7 @@ pipeline {
                 echo 'Finished Static Analysis'
             }
         }
-        stage('Code Coverage') {
-            agent {
-                docker {
-                    image 'node:10-alpine'
-                    args '-p 3000:3000'
-                }
-            }
-            steps {
-                sh 'npm run coverage'
-                echo 'Finished Code Coverage'
-            }
-        }
+        
         */
     }
 }
