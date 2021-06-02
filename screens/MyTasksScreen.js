@@ -7,7 +7,7 @@ import MyTaskItem from '../components/MyTaskItem';
 import * as tasksAction from '../store/action/tasks';
 import Colors from '../constants/Colors';
 
-///create task screen for developer and start task button and end button
+
 const MyTasksScreen = (props) => {
    const dispatch = useDispatch()
    //const tasks = useSelector(state => state.users.availableUsers.filter(user => user.taskId));
@@ -34,9 +34,6 @@ const MyTasksScreen = (props) => {
       </LinearGradient>
     );
   }
-
-///order the task by priority 
-
    return (
     <LinearGradient colors={['#6F7AED','#ffe3ff']} style={styles.gradient}>
      <Button
@@ -78,7 +75,7 @@ MyTasksScreen.navigationOptions = navData => {
   )
  };  
 };
-///design developer task screen
+
 const styles = StyleSheet.create({
   topContainer: {
     alignItems: 'center',    
