@@ -1,5 +1,6 @@
 import React, { useState, useReducer, useCallback, useEffect } from 'react';
-import { View, StyleSheet, Button, ScrollView, KeyboardAvoidingView, ActivityIndicator, Alert } from 'react-native';
+import { View, StyleSheet, Button, ScrollView, KeyboardAvoidingView, ActivityIndicator, Alert, TouchableOpacity
+ } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useDispatch } from 'react-redux';
 
@@ -33,7 +34,7 @@ const formReducer = (state, action) => {
   return state;
 };  
 
-// create login screen & signup screen
+
 const LoginScreen = (props) => {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
@@ -51,15 +52,15 @@ const LoginScreen = (props) => {
     },
     formIsValid: false
   });
-  
+
   const authHandler = async () => {
     let action;
-    if (isSignup) { //save user data in DB
+    if (isSignup) {
       action = authActions.signup(
         formState.inputValues.email,
         formState.inputValues.password
       );
-    } else { // connect to the app with login func
+    } else {
       action = authActions.login(
         formState.inputValues.email,
         formState.inputValues.password
@@ -68,7 +69,7 @@ const LoginScreen = (props) => {
     setError(null);
     setIsLoading(true);
     try {
-        await dispatch(action);
+        await dispatch(action);    
         props.navigation.navigate('Home');
     } catch (err) {
         setError(err.message);
@@ -94,6 +95,13 @@ useEffect(() => {
 },[
     error
 ])
+
+loginTest = () => {
+  this.props.dispatch.authActions.login(this.props.email,this.props.password)
+}
+signupTest = () => {
+  this.props.dispatch.authActions.signup(this.props.email,this.props.password)
+}
 
 return (
     <KeyboardAvoidingView 
@@ -129,7 +137,7 @@ return (
             />
             <View style={styles.buttonContainer}>
               {isLoading ? (
-                  <ActivityIndicator size='small' color={Colors.primary}/> // Add login button
+                  <ActivityIndicator size='small' color={Colors.primary}/>
                   ) : (
                   <Button
                      title={isSignup ? 'Sign Up' : 'Login'}
@@ -137,16 +145,14 @@ return (
                      onPress={authHandler}
                  />
               )}
-
             </View>
-            
             <View style={styles.buttonContainer}>
               <Button
                 title={`Switch to ${isSignup ? 'Login' : 'Sign Up'}`}
                 color={Colors.accent}
                 onPress={() => {
                     setIsSignup(prevState => !prevState);
-                }} //add signup button
+                }}
               />
             </View>
         </ScrollView>
@@ -180,6 +186,13 @@ LoginScreen.navigationOptions = {
   },
   buttonContainer: {
     marginTop: 10
+  },
+  headerButton: {
+    marginHorizontal: 20
+  },
+  headerButtonText: {
+    fontSize: 16,
+    color: Colors.primary
   }
  }
 );
