@@ -1,12 +1,11 @@
 import  React , { useEffect, useCallback } from 'react';
-import { View, Text, FlatList, StyleSheet } from 'react-native';
+import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
-import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import HeaderButton from '../components/UI/HeaderButton';
 import TaskItem from '../components/TaskItem';
 import * as tasksAction from '../store/action/tasks';
+import Colors from '../constants/Colors';
 
 
 const TasksScreen = (props) => {
@@ -28,7 +27,6 @@ const TasksScreen = (props) => {
   }, [addHandler, dispatch]);
 
   if (tasks.length === 0) {
-    ///if the sprint dont have task show the msg task not found
     return ( 
       <LinearGradient colors={['#6F7AED','#ffe3ff']} style={styles.gradient}>
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -37,7 +35,6 @@ const TasksScreen = (props) => {
       </LinearGradient>
     );
   }
-  //show the task item and all the functions of delete ,add and details
    return (
     <LinearGradient colors={['#6F7AED','#ffe3ff']} style={styles.gradient}>
       <FlatList
@@ -71,15 +68,9 @@ TasksScreen.navigationOptions = navData => {
   return {
   headerTitle: 'All Tasks',
   headerRight: (
-    <HeaderButtons HeaderButtonComponent={HeaderButton}>
-      <Item
-        title="add"
-        iconName={
-          Platform.OS === 'android' ? 'md-add' : 'ios-add'
-        }
-        onPress={addFn} 
-      />
-    </HeaderButtons>
+    <TouchableOpacity style={styles.headerButton} onPress={addFn}>
+    <Text style={styles.headerButtonText}>Add</Text>
+    </TouchableOpacity>
   ),
  };  
 };
@@ -90,6 +81,13 @@ const styles = StyleSheet.create({
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  headerButton: {
+    marginHorizontal: 20
+  },
+  headerButtonText: {
+    fontSize: 16,
+    color: Colors.primary
   }
  }
 );
