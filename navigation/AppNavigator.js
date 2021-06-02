@@ -2,26 +2,31 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { Platform } from 'react-native';
 import { createDrawerNavigator } from 'react-navigation-drawer';
-//import screens from App and design defualt navigation optaions
+import Colors from '../constants/Colors';
+
+
+import ByPriortyScreen from '../screens/ByPriortyScreen';
+import EditUserAdminScreen from '../screens/EditUserAdminScreen';
+import EditUserScreen from '../screens/EditUserScreen';
 import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import LogoutScreen from '../screens/LogoutScreen';
-import ProfileScreen from '../screens/ProfileScreen';
+import MyProjectsScreen from '../screens/MyProjectsScreen';
+import MyProfileScreen from '../screens/MyProfileScreen';
+import MyTasksScreen from '../screens/MyTasksScreen';
 import ProjectsScreen from '../screens/ProjectsScreen';
+import SprintsScreen from '../screens/SprintsScreen';
 import TasksScreen from '../screens/TasksScreen';
 import TaskDetailsScreen from '../screens/TaskDetailsScreen';
+import UsersScreen from '../screens/UsersScreen';
 import AddProjectScreen from '../screens/add/AddProjectScreen';
 import AddSprintScreen from '../screens/add/AddSprintScreen';
 import AddTaskScreen from '../screens/add/AddTaskScreen';
-/*
-import EditUserScreen from '../screens/EditUserScreen';
-import MyProjectsScreen from '../screens/MyProjectsScreen';
-import SprintsScreen from '../screens/SprintsScreen';
-import UsersScreen from '../screens/UsersScreen';
-
-*/
-
-import Colors from '../constants/Colors';
+import AddUsersScreen from '../screens/add/AddUsersScreen';
+import AddUserTaskScreen from '../screens/add/AddUserTaskScreen';
+import DeleteUsersScreen from '../screens/add/DeleteUsersScreen';
+import DeleteUserTaskScreen from '../screens/add/DeleteUserTaskScreen';
+import MySprintsScreen from '../screens/MySprintsScreen';
 
 const defaultNavOptions = {
     headerStyle: {
@@ -30,61 +35,75 @@ const defaultNavOptions = {
         headerTintColor: Platform.OS === 'android' ? Colors.primary : Colors.primary
 }
 
-
-// Create Configartion for the screens of the app
 const HomeNavigator = createStackNavigator({
     Home: HomeScreen
 }, {
     defaultNavigationOptions: defaultNavOptions
 });
 
-/*
+
+
+const MyTaskNavigator = createStackNavigator({
+    MyTasks: MyTasksScreen,
+    ByPriorty: ByPriortyScreen
+}, {
+    defaultNavigationOptions: defaultNavOptions
+});
+
 const UsersNavigator = createStackNavigator({
     Users: UsersScreen,
+    EditUserAdmin: EditUserAdminScreen,
+
+}, {
+    defaultNavigationOptions: defaultNavOptions
+});
+
+const MyProjectsNavigator = createStackNavigator({
+    MyProjects: MyProjectsScreen,
+    MySprint: MySprintsScreen,
+    MyTasks : MyTasksScreen,
+
+}, {
+    defaultNavigationOptions: defaultNavOptions
+});
+
+const MyProfileNavigator = createStackNavigator({
+    My_Profile: MyProfileScreen,
     EditUser: EditUserScreen
 }, {
     defaultNavigationOptions: defaultNavOptions
 });
 
-
-const MyProjectsNavigator = createStackNavigator({
-    MyProjects: MyProjectsScreen
-}, {
-    defaultNavigationOptions: defaultNavOptions
-});
-*/
-const ProfileNavigator = createStackNavigator({
-    Profile: ProfileScreen
-}, {
-    defaultNavigationOptions: defaultNavOptions
-});
-
-//Create Config for logout and for the project navigator
-const ProjectsNavigator = createStackNavigator({
+const AllProjectsNavigator = createStackNavigator({
      Projects : ProjectsScreen,
+     AddUsers: AddUsersScreen,
+     DeleteUsers: DeleteUsersScreen,
      AddProject: AddProjectScreen,
-     //Sprints: SprintsScreen,
+     Sprints: SprintsScreen,
      AddSprint: AddSprintScreen,
      Tasks : TasksScreen,
      AddTask: AddTaskScreen,
-     TaskDetails: TaskDetailsScreen
+     AddUserTask: AddUserTaskScreen,
+     DeleteUserTask: DeleteUserTaskScreen,
+     TaskDetails : TaskDetailsScreen
+
 }, {
         defaultNavigationOptions: defaultNavOptions
 });
-
 
 const LogoutNavigator = createStackNavigator({
     Logout: LogoutScreen
 }, {
     defaultNavigationOptions: defaultNavOptions
 });
-//Create Menu Drewer Navigator button and Config for screens
+
 const AppNavigator = createDrawerNavigator({
     Home: HomeNavigator,
-    MyProfile: ProfileNavigator,
-    //MyProjects:MyProjectsNavigator,
-    AllProjects: ProjectsNavigator,
-    //Users:  UsersNavigator,
+    Profile: MyProfileNavigator,
+    My_Project: MyProjectsNavigator,
+    Tasks: MyTaskNavigator,
+    Projects: AllProjectsNavigator,
+    Users:  UsersNavigator,
     Logout: LogoutNavigator
 },{
     contentOptions: {
@@ -98,10 +117,9 @@ const LoginNavigator = createStackNavigator({
     defaultNavigationOptions: defaultNavOptions
 });
 
-// create switcher for main navigator to move forward to the app after succes login
 const MainNavigator = createSwitchNavigator({
     Login: LoginNavigator,
-    App : AppNavigator
+    App : AppNavigator,
 });
 
 export default createAppContainer(MainNavigator);
