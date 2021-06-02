@@ -1,12 +1,11 @@
 import  React,  { useEffect } from 'react';
-import { View, Text, FlatList, Platform, StyleSheet } from 'react-native';
+import { View, Text, FlatList, Platform, StyleSheet, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
-import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import HeaderButton from '../components/UI/HeaderButton';
 import ProjectAdminItem from '../components/ProjectAdminItem';
 import * as projectsAction from '../store/action/projects';
+import Colors from '../constants/Colors';
 
 const ProjectsScreen = (props) => {
    const dispatch = useDispatch()
@@ -16,7 +15,7 @@ const ProjectsScreen = (props) => {
      dispatch(projectsAction.fetchProjects());
    }, [dispatch]);
 
-// if the there no project in the system show the messege
+
    if (projects.length === 0) {
     return ( 
       <LinearGradient colors={['#6F7AED','#ffe3ff']} style={styles.gradient}>
@@ -27,7 +26,7 @@ const ProjectsScreen = (props) => {
 
     );
   }
-  //Use the ProjectItem UI to Design the project Item 
+
    return (
    <LinearGradient colors={['#6F7AED','#ffe3ff']} style={styles.gradient}>
     <FlatList
@@ -60,29 +59,14 @@ ProjectsScreen.navigationOptions = navData => {
   return {
   headerTitle: 'All Projects',
   headerRight: (
-    <HeaderButtons HeaderButtonComponent={HeaderButton}>
-      <Item
-        title="add"
-        iconName={
-          Platform.OS === 'android' ? 'md-add' : 'ios-add'
-        }
-        onPress={() => {
-          navData.navigation.navigate('AddProject');
-          }}
-      />
-    </HeaderButtons>
+    <TouchableOpacity style={styles.headerButton} onPress={() => {navData.navigation.navigate('AddProject');}}>
+    <Text style={styles.headerButtonText}>Add</Text>
+    </TouchableOpacity>
   ),
   headerLeft: (
-    <HeaderButtons HeaderButtonComponent={HeaderButton}>
-    <Item
-      title="Menu"
-      iconName={Platform.OS === 'android' ? 'md-menu' : 'ios-menu'}
-      onPress={() => {
-      navData.navigation.toggleDrawer();
-      }}
-    />
-    
-  </HeaderButtons>
+    <TouchableOpacity style={styles.headerButton} onPress={() => { navData.navigation.toggleDrawer();}}>
+    <Text style={styles.headerButtonText}>Menu</Text>
+    </TouchableOpacity>
   )
  };  
 };
@@ -93,6 +77,13 @@ const styles = StyleSheet.create({
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  headerButton: {
+    marginHorizontal: 20
+  },
+  headerButtonText: {
+    fontSize: 16,
+    color: Colors.primary
   }
  }
 );
