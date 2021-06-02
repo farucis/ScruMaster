@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import Colors from '../constants/Colors';
-/// design the details of the task 
+
 const TaskDetailsScreen = (props) => {
     const taskId = props.navigation.getParam('taskId');
     const Task = useSelector(state => state.tasks.availableTasks.find(task => task.taskId === taskId));
