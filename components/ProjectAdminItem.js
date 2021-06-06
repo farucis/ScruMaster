@@ -4,22 +4,20 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 import Colors from '../constants/Colors';
 import Card from '../components/UI/Card';
 
-//create the project item to manage the projects 
 const ProjectAdminItem = props => {
   return (
-
+    
     <Card style={styles.container}>
       <View style={styles.details}>
         <Text style={styles.title}>{props.title}</Text>
-        <View style={styles.buttonDetailsStyle}>
-        <Button
+
+     </View>
+    <View style={styles.actions}>
+    <Button
           color={Colors.primary}
           title="Details"
           onPress={props.onViewDetail}
         />
-        </View>
-     </View>
-    <View style={styles.actions}>
       <View style={styles.buttonStyle}>
         <Button
           color={Colors.primary}
@@ -45,10 +43,10 @@ const ProjectAdminItem = props => {
     </Card>
   );
 };
-//UI for the card 
+
 const styles = StyleSheet.create({
   container: {
-    height: 180,
+    height: 200,
     width: 330,
     margin: 10,
     flexDirection: 'row',
@@ -59,7 +57,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5,
    },
    buttonDetailsStyle: {
-    alignSelf: 'baseline',
+    marginTop:100,
+    marginBottom:100,
+    padding: 10,
   },
   details: {
     alignItems: 'baseline',
@@ -67,9 +67,8 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   title: {
-    fontSize: 30,
-    marginVertical: 4,
-    fontFamily: 'open-sans-bold',
+    fontSize: 10,
+    marginVertical: 0,
   },
   actions: {
     justifyContent: 'space-between',

@@ -99,11 +99,11 @@ const LogoutNavigator = createStackNavigator({
 
 const AppNavigator = createDrawerNavigator({
     Home: HomeNavigator,
-    Profile: MyProfileNavigator,
-    My_Project: MyProjectsNavigator,
-    Tasks: MyTaskNavigator,
-    Projects: AllProjectsNavigator,
-    Users:  UsersNavigator,
+    My_Profile: MyProfileNavigator,
+    My_Projects: MyProjectsNavigator,
+    My_Task: MyTaskNavigator,
+    All_Projects: AllProjectsNavigator,
+    All_Users:  UsersNavigator,
     Logout: LogoutNavigator
 },{
     contentOptions: {

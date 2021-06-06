@@ -1,7 +1,6 @@
 import  React,  { useEffect } from 'react';
 import { View, Text, StyleSheet, ImageBackground, LogBox, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
-import { LinearGradient } from 'expo-linear-gradient';
 
 import * as usersAction from '../store/action/users';
 import Colors from '../constants/Colors';
@@ -18,16 +17,14 @@ const HomeScreen = (props) => {
   }, [dispatch]);
   
   return (
-    <LinearGradient colors={['#6F7AED','#ffe3ff']} style={styles.gradient}>
     <View style={styles.container}>
       <ImageBackground source={{
-                    uri: 'https://www.designbolts.com/wp-content/uploads/2019/09/Liquid-Gradient-iPhone-11-Wallpaper-High-Quality.jpg',
+                    uri: 'https://cdn.vox-cdn.com/thumbor/CTEu-LzRxSsC8J0c03Ak94qOkbA=/0x0:2160x3840/1200x0/filters:focal(0x0:2160x3840):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/19917284/VRG_Wallpaper_iPhone_SE_alt.0.png',
                   }} style={styles.image}>
            <Text style={styles.text}>Welocme To ScruMaster</Text>
            <Text style={styles.text}>{loginUser.name}</Text>
       </ImageBackground>
   </View>
- </LinearGradient>
 );
 }
 
@@ -59,20 +56,14 @@ const styles = StyleSheet.create({
     fontSize: 36,
     fontWeight: "bold",
     textAlign: "center",
-/*     backgroundColor: "#000000a0"
- */  },
+    backgroundColor: "#000000a0"
+  },
   headerButton: {
     marginHorizontal: 20
   },
   headerButtonText: {
     fontSize: 16,
     color: Colors.primary
-  },
-  gradient: {
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center'
   }
 });
 

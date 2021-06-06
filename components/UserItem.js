@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 
 import Colors from '../constants/Colors';
 import Card from '../components/UI/Card';
-//make the user card with to two buttons for edit and delete user
+
 const UserItem = props => {
   return (
     
@@ -33,7 +33,7 @@ const UserItem = props => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 140,
+    height: 160,
     width: 300,
     margin: 20
    },
@@ -43,8 +43,8 @@ const styles = StyleSheet.create({
     padding: 10
   },
   title: {
-    fontSize: 30,
-    marginVertical: 4
+    fontSize: 20,
+    marginVertical: 0
   },
   topActions: {
     marginTop: 30,

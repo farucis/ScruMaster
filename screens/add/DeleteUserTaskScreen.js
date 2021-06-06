@@ -21,7 +21,7 @@ const DeleteUserTaskScreen = (props) => {
      </LinearGradient>
    );
  } 
-//show the users in the system & create buttun to delete from task 
+
   return (
     <LinearGradient colors={['#6F7AED','#ffe3ff']} style={styles.gradient}> 
        <FlatList
@@ -39,7 +39,7 @@ const DeleteUserTaskScreen = (props) => {
   </LinearGradient>
  );
 };
-//design the delete user from task screen
+
 const styles = StyleSheet.create({
  gradient: {
    width: '100%',

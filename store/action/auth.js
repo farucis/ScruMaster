@@ -1,7 +1,6 @@
 export const SIGNUP = 'SIGNUP';
 export const LOGIN ='LOGIN';
 
-//signup with firebase function
 export const signup = (email, password) => {
     return async dispatch => {
           const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCp82HA18651XcHfTSJbCY4lPueN2s4l30',
@@ -17,7 +16,7 @@ export const signup = (email, password) => {
                 })
             }
           );
-            //test if user exist 
+
           if (!response.ok) {
             const errorResData = await response.json();
             const errorId= errorResData.error.message;
@@ -40,6 +39,8 @@ export const signup = (email, password) => {
                 taskId: '',
                 permission: '',
                 name: '',
+                phone: '',
+                age: ''
               })
           }
         );
@@ -47,7 +48,8 @@ export const signup = (email, password) => {
        };
     };
 
-//login with firebase function
+
+
 export const login = (email, password) => {
     return async dispatch => {
         const response = await fetch(
@@ -64,7 +66,7 @@ export const login = (email, password) => {
             })
         }
         );
- //test if email not found
+    
         if (!response.ok) {
             const errorResData = await response.json();
             const errorId= errorResData.error.message;

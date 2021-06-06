@@ -23,7 +23,7 @@ const AddTaskScreen = (props) => {
   }, [submitHandler]);
   
 
-//create the input for new task
+
 return (
     <ScrollView>
       <View style={styles.form}>
@@ -67,7 +67,7 @@ AddTaskScreen.navigationOptions = navData => {
       )
   };
 };
-//design the add task screen
+
  const styles = StyleSheet.create({
     form: {
       margin: 20

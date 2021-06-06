@@ -19,7 +19,7 @@ useEffect(() => {
   props.navigation.setParams({ submit: submitHandler });
 }, [submitHandler]);
 
-//create the input for adding project & use redux for dispatch
+
 return (
     <ScrollView>
       <View style={styles.form}>
@@ -47,7 +47,7 @@ AddProjectScreen.navigationOptions = navData => {
       )
   };
 };
-//design the scram
+
  const styles = StyleSheet.create({
     form: {
       margin: 20

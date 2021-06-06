@@ -42,8 +42,7 @@ const styles = StyleSheet.create({
     padding: 10
   },
   title: {
-    fontSize: 30,
-    marginVertical: 4
+    fontSize: 10,
   },
   topActions: {
     marginTop: 30,

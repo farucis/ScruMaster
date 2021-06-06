@@ -1,10 +1,12 @@
 import  React,  { useEffect } from 'react';
-import { FlatList, StyleSheet } from 'react-native';
+import { FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import AddUserItem from '../../components/AddUserItem';
 import * as usersAction from '../../store/action/users';
+import Colors from '../../constants/Colors';
+
 
 const AddUsersScreen = (props) => {
    const dispatch = useDispatch()
@@ -42,6 +44,13 @@ const styles = StyleSheet.create({
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  headerButton: {
+    marginHorizontal: 20
+  },
+  headerButtonText: {
+    fontSize: 16,
+    color: Colors.primary
   }
  }
 );

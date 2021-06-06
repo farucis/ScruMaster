@@ -4,7 +4,6 @@ import { View, Text, TextInput, StyleSheet } from 'react-native';
 const INPUT_CHANGE = 'INPUT_CHANGE';
 const INPUT_BLUR = 'INPUT_BLUR';
 
-///create input reducer
 const inputReducer = (state, action) => {
   switch (action.type) {
     case INPUT_CHANGE:
@@ -37,7 +36,8 @@ const Input = props => {
       onInputChange(id, inputState.value, inputState.isValid);
     }
   }, [inputState, onInputChange, id]);
-  ///check if input is ok
+
+
   const textChangeHandler = text => {
     const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let isValid = true;
@@ -62,7 +62,7 @@ const Input = props => {
   const lostFocusHandler = () => {
     dispatch({ type: INPUT_BLUR });
   };
-  ///show the right erorr
+
   return (
     <View style={styles.formControl}>
       <Text style={styles.label}>{props.label}</Text>
@@ -81,7 +81,7 @@ const Input = props => {
     </View>
   );
 };
-/// desigen input place holder
+
 const styles = StyleSheet.create({
   formControl: {
     width: '100%'

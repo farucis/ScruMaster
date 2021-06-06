@@ -16,7 +16,7 @@ const AddUserTaskScreen = (props) => {
     dispatch(usersAction.fetchUsers());
   }, [dispatch]);
 
-//show the users in the system & create buttun to add for task 
+
    return (
      <LinearGradient colors={['#6F7AED','#ffe3ff']} style={styles.gradient}> 
         <FlatList
@@ -35,7 +35,7 @@ const AddUserTaskScreen = (props) => {
    </LinearGradient>
   );
 };
-//design the add user to task screen
+
 const styles = StyleSheet.create({
   gradient: {
     width: '100%',

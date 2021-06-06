@@ -36,7 +36,6 @@ const ByPriortyScreen = (props) => {
       </LinearGradient>
     );
   }
-  //order the tasks by priority
    return (
     <LinearGradient colors={['#6F7AED','#ffe3ff']} style={styles.gradient}>
       <FlatList
@@ -68,7 +67,7 @@ ByPriortyScreen.navigationOptions = navData => {
   headerTitle: 'Order By priority',
  };  
 };
-//design by priority screen
+
 const styles = StyleSheet.create({
   topContainer: {
     alignItems: 'center',    

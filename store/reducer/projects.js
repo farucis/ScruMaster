@@ -1,6 +1,6 @@
 import Project from '../../models/project';
 
-import { DELETE_PROJECT, CREATE_PROJECT, SET_PROJETCS } from '../action/projects';
+import { DELETE_PROJECT, CREATE_PROJECT, SET_PROJETCS, SET_MY_PROJETCS } from '../action/projects';
 
 
 const initialState = {
@@ -15,6 +15,11 @@ export default (state = initialState, action) => {
                 availableProjects: action.projects,
                 userProjects: action.userProjects
             };
+        case SET_MY_PROJETCS: 
+        return {
+            availableProjects: action.projects,
+            userProjects: action.userProjects
+        };    
         case CREATE_PROJECT:
              const newProject = new Project(
                  action.projectData.projectId,
