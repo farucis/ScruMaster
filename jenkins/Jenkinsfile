@@ -38,7 +38,7 @@ pipeline {
             }
         }
         
-        stage('Static Analysis') {
+        stage('Test Reports') {
             agent {
                 docker {
                     image 'node:10-alpine'
